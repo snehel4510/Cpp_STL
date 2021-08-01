@@ -1,3 +1,5 @@
+// comparator functions in c++ STL 
+
 #include <bits/stdc++.h>
 using namespace std;
 bool incr(int a, int b)
