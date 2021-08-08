@@ -1,38 +1,40 @@
-// #include <bits/stdc++.h>
-// using namespace std;
-// void print(set<string> &s)
-// {
-//     for (auto &it : s)
-//     {
-//         cout << (it) << endl;
-//     }
-// }
-// int main()
-// {
-//     set<string> s; // stores unique elements/keys in sorted order
-//     s.insert("abc");
-//     s.insert("zdef");
-//     s.insert("yghi");
-//     s.insert("jkl");
-//     //print(s);
-//     auto i = s.find("jkl");
-//     if (i != s.end())
-//     {
-//         //cout << (*i); // prints jkl
-//     }
-//     else
-//     {
-//         //cout << "Not in set";
-//     }
+// sets in c++ stl
 
-//     s.erase(i);     //erases "jkl"
-//     s.erase("abc"); //erases "abc"
-//     print(s);
+#include <bits/stdc++.h>
+using namespace std;
+void print(set<string> &s)
+{
+    for (auto &it : s)
+    {
+        cout << (it) << endl;
+    }
+}
+int main()
+{
+    set<string> s; // stores unique elements/keys in sorted order
+    s.insert("abc");
+    s.insert("zdef");
+    s.insert("yghi");
+    s.insert("jkl");
+    //print(s);
+    auto i = s.find("jkl");
+    if (i != s.end())
+    {
+        //cout << (*i); // prints jkl
+    }
+    else
+    {
+        //cout << "Not in set";
+    }
 
-//     //UNORDERED SETS
-//     // doesn't store elemnts in sorted order and time taken is O(1) instead of O(logn) for every operation
-//     return 0;
-// }
+    s.erase(i);     //erases "jkl"
+    s.erase("abc"); //erases "abc"
+    print(s);
+
+    //UNORDERED SETS
+    // doesn't store elemnts in sorted order and time taken is O(1) instead of O(logn) for every operation
+    return 0;
+}
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------//
 
