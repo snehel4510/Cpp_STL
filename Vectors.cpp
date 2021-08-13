@@ -95,3 +95,5 @@ int main()
 
     return 0;
 }
+
+// NOTE -- Deque is also a container in C++ STL which is almost similar to vectors, the only difference is that there you can also insert elements at the front using push_front() or erase it using pop_front()
