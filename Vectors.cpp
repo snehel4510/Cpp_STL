@@ -15,6 +15,41 @@ void print(vector<int> v)
 
 int main()
 {
+
+    //declaration
+    vector<int> arr;
+
+    //insertion of elements
+    arr.push_back(5);
+    arr.push_back(4);
+    arr.push_back(1);
+    arr.push_back(3);
+    arr.push_back(2);
+    print(arr); // 5,4,1,3,2
+
+    // Iterators
+    // arr.begin() -> iterator pointing the first element of the vector
+    // arr.end() -> iterator pointing to the end of last element of the vector
+
+    arr.insert(arr.begin() + 2, 7); //inserting 7 at 2nd index
+    print(arr);                     //5 4 7 1 3 2
+
+    // accessing the elements
+    cout << arr.back() << endl;  //last element (2)
+    cout << arr.front() << endl; //first element (5)
+    cout << arr[3] << endl;      // element at 3rd index (1)
+
+    //deleting or erasing the elements
+    arr.pop_back(); // pops out the last element
+    print(arr);     // 5,4,1,3
+
+    // Erasing an element from the vector
+    auto it = arr.begin() + 2; // iterator pointing to 3rd index value from the vector
+    arr.erase(it);
+    print(arr);
+    arr.erase(arr.begin(), arr.end()); //erases the complete vector
+    print(arr);
+
     vector<int> v = {5, 3, 7, 1, 2, 9, 8, 4, 6, 0};
 
     int l = v.size(); //returns the size of the vector
@@ -46,13 +81,6 @@ int main()
     auto i4 = find(v.begin(), v.end(), 4);
     int index = distance(v.begin(), i4);
     cout << index << endl;
-
-    // Erase an element from the vector
-    auto i5 = v.begin() + 2;
-    v.erase(i5);
-    print(v);
-    v.erase(v.begin(), v.end()); //erases the complete vector
-    print(v);
 
     vector<int> v1 = {3, 7, 1, 8, 2, 9, 2, 5};
     // sorted vector will be -> {1,2,2,3,5,7,8,9}
