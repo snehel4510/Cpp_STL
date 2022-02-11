@@ -5,15 +5,15 @@ int main()
 {
     vector<int> v1 = {20, 30, 40, 25, 15};
     // Converting vector into a heap using make_heap() -> by default it will be a max heap
-    make_heap(v1.begin(), v1.end());
-    cout << v1.front() << endl;
+    make_heap(v1.begin(), v1.end()); // O(n)
+    cout << v1.front() << endl;      // O(1)
     // using push_back() to enter element in vector
     v1.push_back(50);
     // using push_heap() to reorder elements
-    push_heap(v1.begin(), v1.end());
+    push_heap(v1.begin(), v1.end()); // O(logn)
     cout << v1.front() << endl;
     // using pop_heap() to delete maximum element
-    pop_heap(v1.begin(), v1.end());
+    pop_heap(v1.begin(), v1.end()); // O(logn)
     v1.pop_back();
     cout << v1.front() << endl;
 
@@ -23,7 +23,7 @@ int main()
         cout << x << " ";
     cout << endl;
     // sorting heap using sort_heap()
-    sort_heap(v1.begin(), v1.end());
+    sort_heap(v1.begin(), v1.end()); // O(nlogn)
     // After this operation, the container is no longer a heap
     // Displaying heap elements
     cout << "The heap elements after sorting are : ";
